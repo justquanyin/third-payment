@@ -1,6 +1,6 @@
 {
   "name": "third-payment",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "第三方支付统一支持模块",
   "main": "index.js",
   "repository": {
