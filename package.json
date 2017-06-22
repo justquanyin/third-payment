@@ -1,0 +1,38 @@
+{
+  "name": "third-payment",
+  "version": "0.0.1",
+  "description": "第三方支付统一支持模块",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justquanyin/third-payment.git"
+  },
+  "keywords": [
+    "node",
+    "alipay",
+    "weixinpay",
+    "payment"
+  ],
+  "author": "quanyin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justquanyin/third-payment/issues"
+  },
+  "homepage": "https://github.com/justquanyin/third-payment#readme",
+  "dependencies": {
+    "async": "^1.5.0",
+    "crc": "^3.3.0",
+    "debug": "~2.2.0",
+    "md5": "^2.0.0",
+    "moment": "^2.10.6",
+    "underscore": "^1.8.3",
+    "utf8": "^2.1.1",
+    "uuid": "^2.0.1",
+     "xml": "^1.0.0",
+    "xml2js": "^0.4.15",
+    "urlencode":"1.1.0",
+    "random-gen": "0.1.0",
+    "request": "^2.64.0",
+    "request-promise": "4.2.1"
+  }
+}
