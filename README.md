@@ -31,7 +31,7 @@ $ npm install third-payment
 * 参数说明
 
   | 参数 | 类型 | 是否必填 | 备注 |
-  | --- |:--:| -----:| -----:| -----:|
+  | --- |:--:| -----:| -----:|
   |type | string | true| weixin_app(微信APP) \| wexin_mp(微信公众号) \| weixin_native(微信扫码) \| aliapy_app(支付宝APP) \| alipay_web(支付宝网页) \| alipay_mp(支付宝移动端)  |
   |vendor|string|false|公众号标识(对应微信配置内)|
   |trade_id|string|true|商户订单号| 
