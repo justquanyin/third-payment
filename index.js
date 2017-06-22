@@ -97,6 +97,12 @@ class Lib {
     });
   }
 
+  queryTrade(datas,trade){
+    var Channel = this.getChannel(datas.type,datas.vendor);
+    Channel.type = datas.type;
+    return Channel.query(trade);
+  }
+
 
 }
 module.exports = Lib;
