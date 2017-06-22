@@ -29,3 +29,37 @@ obj.getPrePay({
 );
 
 ```
+
+## 配置文件
+
+```json
+{
+  "weixin": {
+    "app": { // APP
+      "appid": "",
+      "mch_id": "",
+      "key": "",
+      "it_b_pay": ""  // 支付过期时间
+    },
+    "official_account_1": { // 公众号
+      "appid": "",
+      "appsecret": "",
+      "mch_id": "",
+      "key": "",
+      "it_b_pay": ""  // 支付过期时间
+    }
+  },
+  "alipay": {
+    "app": {
+      "partner": "",
+      "app_id": "",
+      "seller_id": "",
+      "it_b_pay": "",  // 支付过期时间
+      "public_key": "", // 公钥
+      "private_key": "",   // 私钥
+      "openali_public_key": ""  // openapi 公钥
+    }
+  }
+}
+
+```
