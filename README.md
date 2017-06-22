@@ -54,7 +54,7 @@ $ npm install third-payment
 * format    可空  (微信request body 需要传 xml)
 
 ### 查询交易状态 ： .queryTrade(datas,trade)
-* data      交易详情
+* datas      交易详情
   ```js
   {
     type : "weixin_mp",

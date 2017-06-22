@@ -1,7 +1,7 @@
 {
   "name": "third-payment",
-  "version": "0.0.3",
-  "description": "第三方支付统一支持模块",
+  "version": "0.1.0",
+  "description": "第三方支付统一支持模块,支持微信支付、支付宝支付。",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -11,7 +11,11 @@
     "node",
     "alipay",
     "weixinpay",
-    "payment"
+    "payment",
+    "第三方支付",
+    "微信支付",
+    "支付宝",
+    "支付模块"
   ],
   "author": "quanyin",
   "license": "ISC",
