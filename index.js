@@ -62,6 +62,7 @@ class Lib {
       case "alipay_app" : 
       case "alipay_mp" : 
       case "alipay_web" :
+      case "alipay_native" : 
         var temp = this.conf["alipay"];
         return new Alipay(temp[vendor]);
 
