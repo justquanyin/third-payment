@@ -158,4 +158,4 @@ obj.queryTrade(data,trade).then(
 ## 备注
 
 * 功能持续完善中.....
-* 如有需要功能请发送邮件to ```89861722@163.com``` 或者 请在 github 上 open issue  
+* 如有需要功能请发送邮件to ```898617222@163.com``` 或者 请在 github 上 open issue  
