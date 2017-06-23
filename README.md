@@ -32,7 +32,7 @@ $ npm install third-payment
 
   | 参数 | 类型 | 是否必填 | 备注 |
   | --- |:--:| -----:| -----:|
-  |type | string | true| weixin_app(微信APP) \| wexin_mp(微信公众号) \| weixin_native(微信扫码) \| aliapy_app(支付宝APP) \| alipay_web(支付宝网页) \| alipay_mp(支付宝移动端)  |
+  |type | string | true| weixin_app(微信APP) \| wexin_mp(微信公众号) \| weixin_native(微信扫码) \| weixin_web(h5支付) \| aliapy_app(支付宝APP) \| alipay_web(支付宝网页) \| alipay_mp(支付宝移动端)  |
   |vendor|string|false|公众号标识(对应微信配置内)|
   |trade_id|string|true|商户订单号| 
   |description|string|true|商品描述| 
@@ -41,6 +41,7 @@ $ npm install third-payment
   |detail|string|false|商品详情| 
   |ip|string|false|ip地址| 
   |openid|string|false|公众号获取的openid| 
+  |scene_info|string \| object |false|场景信息({"h5_info": //h5支付固定传"h5_info" {"type": "",  //场景类型 "wap_url": "",//WAP网站URL地址 "wap_name": ""  //WAP 网站名} })| 
 
 ### 校验第三方回调数据 ： .verifyResponse(datas,response,format)
 * data      交易详情

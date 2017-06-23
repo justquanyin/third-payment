@@ -55,6 +55,7 @@ class Lib {
       case "weixin_app" : 
       case "weixin_mp" : 
       case "weixin_native" : 
+      case "weixin_web" :
         var temp = this.conf["weixin"];
         return  new Weixin(temp[vendor]);
         
