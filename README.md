@@ -96,7 +96,7 @@ obj.getPrePay({
 /**
  *第三方服务器回调验证
  *
- * @param datas {type:"alipay_app",vendor:"app"}
+ * @param datas {type:"alipay",vendor:"app"}
  * @param response  请求body
  * @param format    默认 json
  */
@@ -108,11 +108,22 @@ obj.verifyResponse(datas,response,format).then(
 /**
  * 查询
  *
- * @param datas {type:"alipay_app",vendor:"app"}
+ * @param datas {type:"alipay",vendor:"app"}
  * @param trade   object     交易ID   示例:{trade_no:"23232",out_trade_no:"1222"}   trade_no 与 out_trade_no 二选一
  * @param format    默认 json
  */
 obj.queryTrade(data,trade).then(
+  res=>console.log(res)
+ );
+
+
+/**
+ * 退款
+ *
+ * @param trade   object     交易ID   示例:{type:"weixin",vendor:"app",trade_id:"23232",refund_id:"12333"} 
+ * @param format    默认 json
+ */
+obj.refund(trade).then(
   res=>console.log(res)
  );
 
@@ -129,7 +140,9 @@ obj.queryTrade(data,trade).then(
       "appid": "",
       "mch_id": "",
       "key": "",
-      "it_b_pay": ""  // 支付过期时间
+      "it_b_pay": "",  // 支付过期时间
+      "client_key" : "" ,   // 微信双向加密密码
+      "client_cert" : ""   // 微信双向加密密码
     },
     "official_account_1": { // 公众号
       "appid": "",
