@@ -105,6 +105,11 @@ class Lib {
     return Channel.query(trade);
   }
 
+  refundTrade(trade){
+    var Channel = this.getChannel(trade.type,trade.vendor);
+    return Channel.refund(trade);
+  }
+
 
 }
 module.exports = Lib;

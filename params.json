@@ -4,7 +4,9 @@
       "appid": "",
       "mch_id": "",
       "key": "",
-      "it_b_pay": ""  // 支付过期时间
+      "it_b_pay": "",  // 支付过期时间
+      "client_key" : "" ,   // 微信双向加密密码
+      "client_cert" : ""   // 微信双向加密密码
     },
     "official_account_1": { // 公众号
       "appid": "",
