@@ -26,7 +26,7 @@ class Lib {
       
     }
     if(typeof config === "object"){
-      this.conf = conf;
+      this.conf = config;
     }
 
     if(!config){
