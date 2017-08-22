@@ -1,6 +1,6 @@
 {
   "name": "third-payment",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "第三方支付统一支持模块,支持微信支付、支付宝支付。",
   "main": "index.js",
   "repository": {

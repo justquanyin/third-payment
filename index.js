@@ -110,6 +110,11 @@ class Lib {
     return Channel.refund(trade);
   }
 
+  transfer(datas){
+    var Channel = this.getChannel("alipay","app");
+    return Channel.refund(datas);
+  }
+
 
 }
 module.exports = Lib;
