@@ -112,7 +112,7 @@ class Lib {
 
   transfer(datas){
     var Channel = this.getChannel("alipay_app","app");
-    return Channel.refund(datas);
+    return Channel.transfer(datas);
   }
 
 
