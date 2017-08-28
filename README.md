@@ -1,6 +1,7 @@
 
 > 此模块支持 微信&支付宝 第三方支付相关功能
 
+
 ## 安装
 
 ```
@@ -10,7 +11,7 @@ $ npm install third-payment
 ## 说明
 
 ### 类初始化 : new Payment(params)
-* params    配置文件or配置对象
+* params    配置文件路径 or 配置对象
 
 ### 获取预支付数据 ： .getPrePay(data)
 * data      交易详情
@@ -65,10 +66,24 @@ $ npm install third-payment
 * trade    交易号json对象(object)
   ```js 
     { 
-      trade_no:"平台交易号",
-      out_trade_no:"商户交易号"
+      trade_no:"平台交易号",  // 二选一
+      out_trade_no:"商户交易号"  // 二选一
     }
   ```
+
+### 支付宝单笔转账 ： .transfer(datas)
+* datas      交易详情
+  ```js
+  {
+    out_biz_no : "12233333",   // 商户交易ID
+    payee_type : "ALIPAY_USERID",  // 收款方账户类型。可取值： 1、ALIPAY_USERID：支付宝账号对应的支付宝唯一用户号。以2088开头的16位纯数字组成。 2、ALIPAY_LOGONID：支付宝登录号，支持邮箱和手机号格式。
+    payee_account : "3333333" , // 收款方账户。与payee_type配合使用。付款方和收款方不能是同一个账户
+    amount  : 0.1, //转账金额，单位：元。  只支持2位小数，小数点前最大支持13位，金额必须大于等于0.1元。 最大转账金额以实际签约的限额为准
+    payer_show_name  :  "张三",  //  付款方姓名
+    remark  :  "备注" // 备注
+  }
+  ```
+
 
 ## 使用方式
 
@@ -127,7 +142,15 @@ obj.refund(trade).then(
   res=>console.log(res)
  );
 
-
+/**
+ * 转账（仅限支付宝）
+ *
+ * @param datas   object     
+ * @param format    默认 json
+ */
+obj.transfer(datas).then(
+  res=>console.log(res)
+ );
 
 ```
 
