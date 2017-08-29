@@ -71,6 +71,20 @@ $ npm install third-payment
     }
   ```
 
+### 退款操作 ： .refund(trade)
+
+* trade    交易号json对象(object)
+  ```js 
+    { 
+      trade_no:"平台交易号",  // 二选一
+      out_trade_no:"商户交易号",  // 二选一
+      type:"alipay_app",
+      vendor:"app",
+      out_request_no : "部分退款唯一ID"  // 可选
+    }
+  ```
+
+
 ### 支付宝单笔转账 ： .transfer(datas)
 * datas      交易详情
   ```js
@@ -135,7 +149,7 @@ obj.queryTrade(data,trade).then(
 /**
  * 退款
  *
- * @param trade   object     交易ID   示例:{type:"weixin",vendor:"app",trade_id:"23232",refund_id:"12333"} 
+ * @param trade   object     交易ID   示例:{type:"weixin",vendor:"app",trade_id:"23232","out_request_no":"213121"} 
  * @param format    默认 json
  */
 obj.refund(trade).then(
