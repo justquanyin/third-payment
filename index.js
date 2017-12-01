@@ -2,6 +2,7 @@
 var Common = require("./common"),
     Alipay = require("./lib/alipay"),
     Weixin = require("./lib/weixin"),
+    Huawei = require("./lib/huawei"),
     fs = require('fs'),
     path = require('path'),
     debug  = require("debug")("third-payment");
@@ -52,13 +53,14 @@ class Lib {
 
   getChannel(type,vendor){
     switch(type){
+      case "weixin":
       case "weixin_app" : 
       case "weixin_mp" : 
       case "weixin_native" : 
       case "weixin_web" :
         var temp = this.conf["weixin"];
         return  new Weixin(temp[vendor]);
-        
+      case "alipay":
       case "alipay_app" : 
       case "alipay_mp" : 
       case "alipay_web" :
@@ -66,6 +68,9 @@ class Lib {
         var temp = this.conf["alipay"];
         return new Alipay(temp[vendor]);
 
+      case "huawei" : 
+        var temp = this.conf["huawei"];
+        return new Huawei(temp[vendor]);
       default : 
         debug("支付类型错误: type");
         return false;
