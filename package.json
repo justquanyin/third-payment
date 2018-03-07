@@ -30,14 +30,22 @@
     "debug": "~2.2.0",
     "md5": "^2.0.0",
     "moment": "^2.10.6",
-    "underscore": "^1.8.3",
-    "utf8": "^2.1.1",
-    "uuid": "^2.0.1",
-     "xml": "^1.0.0",
-    "xml2js": "^0.4.15",
-    "urlencode":"1.1.0",
     "random-gen": "0.1.0",
     "request": "^2.64.0",
-    "request-promise": "4.2.1"
+    "request-promise": "4.2.1",
+    "underscore": "^1.8.3",
+    "urlencode": "1.1.0",
+    "utf8": "^2.1.1",
+    "uuid": "^2.0.1",
+    "xml": "^1.0.0",
+    "xml2js": "^0.4.15"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
